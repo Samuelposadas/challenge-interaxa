@@ -6,7 +6,7 @@ Proyecto ABM de usuarios , podes agregar , modificar y eliminar un usuario solo 
 
 1) Hacer un git clone al proyecto en mi repositorio de github.
 2) npm install para instalar los packetes. 
-3) abrir 2 consolas , en una consola correr el comando npm run fake-api para correr el servidor y en la otra correr npm start para correr la aplicacion en react .
+3) abrir 2 consolas , en una consola correr el comando npm run fake-api para correr el servidor y en la otra correr npm start para correr la aplicacion en react.
 
 
 
