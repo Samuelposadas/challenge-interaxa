@@ -5,8 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
 
 const Navigation = () => {
-  const { loginWithRedirect, logout } = useAuth0();
-  const { user } = useAuth0();
+  const { loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
 
   return (
     <>
@@ -29,13 +28,16 @@ const Navigation = () => {
             <Navbar.Brand>Challenge ABM Interaxa</Navbar.Brand>
           </NavLink>
           <div>
-            <Button
-              style={{ marginRight: "20px" }}
-              onClick={() => loginWithRedirect()}
-            >
-              Login
-            </Button>
-            <Button onClick={() => logout()}>logout</Button>
+            {isAuthenticated ? (
+              <Button onClick={() => logout()}>logout</Button>
+            ) : (
+              <Button
+                style={{ marginRight: "20px" }}
+                onClick={() => loginWithRedirect()}
+              >
+                Login
+              </Button>
+            )}
           </div>
         </Container>
       </Navbar>
